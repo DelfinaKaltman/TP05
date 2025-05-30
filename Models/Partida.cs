@@ -17,10 +17,12 @@ namespace TP04.Models
         public static Dictionary<string> pistas { get; private set; }
 
         
-        public Partida (string respuesta)
+        public Partida (string nombre, int numeroSala)
         {
+            pNombre = nombre;
             respuestasCorrectas = new Dictionary<string>{"puerta principal", "inter", 3241, "MVC", "71612"};
-            sala = 0;
+            pNumeroSala = numeroSala;
+            pistas = new Dictionary<string>{""}; //falta poner las pistas
         }
 
         public static void Sala(string respuesta)
