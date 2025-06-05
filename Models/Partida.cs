@@ -22,7 +22,7 @@ namespace TP04.Models
             pNombre = nombre;
             respuestasCorrectas = new Dictionary<string>{"puerta principal", "inter", 3241, "MVC", "71612"};
             pNumeroSala = numeroSala;
-            pistas = new Dictionary<string>{""}; //falta poner las pistas
+            pistas = new Dictionary<string>{"Estoy al frente y todos deben pasar por mí. No soy camino… ¿qué soy?", "Lautaro Martínez se fue a este equipo, después de jugar en Racing", "Vestite de abajo para arriba", "Son tres letras, delfi ya contó chistes sobre esto", "L abre el acertijo, G va caminando al lado, y O lo cierra encantado. Si a cada letra le das su lugar, ¿qué tres números vas a anotar?"};
         }
 
         public static void Sala(string respuesta)
@@ -36,6 +36,9 @@ namespace TP04.Models
                 }
             }
         }
+
+            public string PedirPista()
+        { return pistas[numeroSala - 1]; }
     }
 }
 
