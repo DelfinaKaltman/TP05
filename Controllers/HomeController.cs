@@ -20,8 +20,7 @@ public class HomeController : Controller
 
     public IActionResult JuegoSession()
     {
-        Usuario usu = new Usuario (email, password);
-        HttpContext.Session.SetString("user", Objeto.ObjectToString(usu));
+       
     }
 
     public IActionResult Tutorial()
@@ -29,47 +28,26 @@ public class HomeController : Controller
         return View("Tutorial");
     }
 
-
-    public IActionResult InicializarPartida()
+        public IActionResult InicializarPartida(string nombre)
     {
-        Partida partida = new Partida();
-        return View("Juego");
-    }
+        Partida partida = new Partida(nombre);
+        HttpContext.Session.SetString("juego", Objeto.ObjectToString(partida));
 
-    public IActionResult Sala1()
-    {
-        ViewBag.respuesta = Partida.comprobarRespuesta();
-        ViewBag.pistas = Partida.pedirPista();
+
         return View("Sala1");
     }
 
-    public IActionResult Sala2()
+
+    public IActionResult PasarDeSala(string respuesta)
     {
-        ViewBag.respuesta = Partida.comprobarRespuesta();
-        ViewBag.pistas = Partida.pedirPista();
-        return View("Sala2");
+        Partida partida = Objeto.StringToObject<Partida>(HttpContext.Session.GetString("juego"));
+        ViewBag.respuesta = partida.comprobarRespuesta(respuesta);
+        ViewBag.pistas = partida.pedirPista();
+        HttpContext.Session.SetString("juego", Objeto.ObjectToString(partida));
+        return View("Sala"+partida.numeroSala);
     }
 
-    public IActionResult Sala3()
-    {
-        ViewBag.respuesta = Partida.comprobarRespuesta();
-        ViewBag.pistas = Partida.pedirPista();
-        return View("Sala3");
-    }
 
-    public IActionResult Sala4()
-    {
-        ViewBag.respuesta = Partida.comprobarRespuesta();
-        ViewBag.pistas = Partida.pedirPista();
-        return View("Sala4");
-    }
-
-    public IActionResult Sala5()
-    {
-        ViewBag.respuesta = Partida.comprobarRespuesta();
-        ViewBag.pistas = Partida.pedirPista();
-        return View("Sala5");
-    }
 
     public IActionResult Resultado()
     {

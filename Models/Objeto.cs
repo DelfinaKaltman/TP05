@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+namespace TP05.Models;
 public static class Objeto
 {
 public static string ObjectToString<T>(T? obj)
