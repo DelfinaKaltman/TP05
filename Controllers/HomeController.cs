@@ -59,7 +59,7 @@ public class HomeController : Controller
         } 
         else
         {
-            return View("Sala"+partida.numeroSala);
+            return View("Sala"+ partida.numeroSala);
         }
     }
 }

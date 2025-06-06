@@ -19392,6 +19392,11 @@
       "FilePath": "c:\\Users\\49008545\\TP05\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\49008545\\TP05\\Views\\Home\\Sala.cshtml",
+      "TargetPath": "Views\\Home\\Sala.cshtml",
+      "FileKind": "mvc"
     }
   ],
   "SerializationFormat": "0.3"
