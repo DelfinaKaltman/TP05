@@ -33,7 +33,6 @@ public class HomeController : Controller
         Partida partida = new Partida(nombre);
         HttpContext.Session.SetString("juego", Objeto.ObjectToString(partida));
 
-
         return View("Sala1");
     }
 
@@ -44,7 +43,7 @@ public class HomeController : Controller
         ViewBag.respuesta = partida.comprobarRespuesta(respuesta);
         ViewBag.pistas = partida.pedirPista();
         HttpContext.Session.SetString("juego", Objeto.ObjectToString(partida));
-        return View("Sala" + partida.numeroSala);
+        return View("Sala"+partida.numeroSala);
     }
 
 
