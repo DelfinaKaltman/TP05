@@ -40,18 +40,26 @@ public class HomeController : Controller
     public IActionResult PasarDeSala(string respuesta)
     {
         Partida partida = Objeto.StringToObject<Partida>(HttpContext.Session.GetString("juego"));
-        ViewBag.respuesta = partida.comprobarRespuesta(respuesta);
-        ViewBag.pistas = partida.pedirPista();
+        partida.comprobarRespuesta(respuesta);
+        partida.pedirPista();
         HttpContext.Session.SetString("juego", Objeto.ObjectToString(partida));
         return View("Sala"+partida.numeroSala);
     }
 
 
-    public IActionResult Resultado()
+    public IActionResult Resultado(int numeroSala, string respuesta)
     {
+        Partida partida = Objeto.StringToObject<Partida>(HttpContext.Session.GetString("juego"));
+        partida.comprobarRespuesta(respuesta);
+        HttpContext.Session.SetString("juego", Objeto.ObjectToString(partida));
+
         if(numeroSala >= 5) 
         {
             return View("Resultado");
+        } 
+        else
+        {
+            return View("Sala"+partida.numeroSala);
         }
     }
 }

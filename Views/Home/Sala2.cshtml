@@ -1,0 +1,15 @@
+@{
+    ViewData["Title"] = "Sala dos";
+}
+<ul class="">
+@foreach(char c in ViewBag.palabraMostrar)
+{
+    <li>@(c + " ")</li>
+}
+
+</form>
+<p>Respuesta:</p>
+<form action='@Url.Action("PasarDeSala", "Home")' method='POST'>
+<input type="text" name="respuesta"/>
+<input type="submit" name="Arriesgar"/>
+</form>
