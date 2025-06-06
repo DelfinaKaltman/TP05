@@ -18,17 +18,17 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult JuegoSession()
-    {
-       
-    }
 
     public IActionResult Tutorial()
     {
         return View("Tutorial");
     }
 
-        public IActionResult InicializarPartida(string nombre)
+    public IActionResult Créditos()
+    {
+        return View("Creditos");
+    }
+    public IActionResult InicializarPartida(string nombre)
     {
         Partida partida = new Partida(nombre);
         HttpContext.Session.SetString("juego", Objeto.ObjectToString(partida));
@@ -44,15 +44,12 @@ public class HomeController : Controller
         ViewBag.respuesta = partida.comprobarRespuesta(respuesta);
         ViewBag.pistas = partida.pedirPista();
         HttpContext.Session.SetString("juego", Objeto.ObjectToString(partida));
-        return View("Sala"+partida.numeroSala);
+        return View("Sala" + partida.numeroSala);
     }
-
 
 
     public IActionResult Resultado()
     {
-        ViewBag.resultado = Partida.comprobarRespuesta();
-        ViewBag.pistas = Partida.pedirPista();
         if(numeroSala >= 5) 
         {
             return View("Resultado");
