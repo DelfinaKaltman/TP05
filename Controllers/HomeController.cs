@@ -18,7 +18,19 @@ public class HomeController : Controller
         return View();
     }
 
-        public IActionResult InicializarPartida()
+    public IActionResult JuegoSession()
+    {
+        Usuario usu = new Usuario (email, password);
+        HttpContext.Session.SetString("user", Objeto.ObjectToString(usu));
+    }
+
+    public IActionResult Tutorial()
+    {
+        return View("Tutorial");
+    }
+
+
+    public IActionResult InicializarPartida()
     {
         Partida partida = new Partida();
         return View("Juego");
