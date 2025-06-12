@@ -26,7 +26,7 @@ public class HomeController : Controller
 
     public IActionResult Créditos()
     {
-        return View("Creditos");
+        return View("Credito");
     }
     public IActionResult InicializarPartida(string nombre)
     {
@@ -41,9 +41,16 @@ public class HomeController : Controller
     {
         Partida partida = Objeto.StringToObject<Partida>(HttpContext.Session.GetString("juego"));
         partida.comprobarRespuesta(respuesta);
-        partida.pedirPista();
         HttpContext.Session.SetString("juego", Objeto.ObjectToString(partida));
         return View("Sala"+partida.numeroSala);
+    }
+
+    public IActionResult PedirPista()
+    {
+        Partida partida = Objeto.StringToObject<Partida>(HttpContext.Session.GetString("juego"));
+        partida.pedirPista();
+        HttpContext.Session.SetString("juego", Objeto.ObjectToString(partida));
+        return View("Pistas");
     }
 
 
@@ -59,7 +66,7 @@ public class HomeController : Controller
         } 
         else
         {
-            return View("Sala"+ partida.numeroSala);
+            return View("Sala"+partida.numeroSala);
         }
     }
 }

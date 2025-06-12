@@ -20,7 +20,7 @@ namespace TP05.Models
         public Partida (string pNombre)
         {
             nombre = pNombre;
-            respuestasCorrectas = new List<string>{"puerta principal", "inter", "3241", "MVC", "71612"};
+            respuestasCorrectas = new List<string>{"puerta principal", "inter de milan", "3241", "MVC", "71612"};
             numeroSala = 1;
             pistas = new List<string>{"Estoy al frente y todos deben pasar por mí. No soy camino… ¿qué soy?", "Lautaro Martínez se fue a este equipo, después de jugar en Racing", "Vestite de abajo para arriba", "Son tres letras, delfi ya contó chistes sobre esto", "L abre el acertijo, G va caminando al lado, y O lo cierra encantado. Si a cada letra le das su lugar, ¿qué tres números vas a anotar?"};
         }
@@ -29,7 +29,7 @@ namespace TP05.Models
         {
             respuesta = respuesta.ToLower();
             
-                if (respuesta == respuestasCorrectas[numeroSala])
+                if (respuesta == respuestasCorrectas[numeroSala - 1])
                 {
                     numeroSala++;
                 } 

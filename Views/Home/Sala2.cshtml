@@ -1,3 +1,10 @@
 @{
     ViewData["Title"] = "Sala dos";
 }
+<h1>De qué equipo está decorada la habitación?</h1>
+<p>Respuesta:</p>
+<form action='@Url.Action("PasarDeSala", "Home")' method='POST'>
+<input type="text" name="respuesta"/>
+<input type="submit" name="arriesgar"/>
+</form>
+<a href='@Url.Action("PedirPista", "Home")'>Quiero una pista</a>

@@ -1,8 +1,8 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\49008545\\TP05\\wwwroot\\audio\\copy_DA9EDF04-7D58-456B-8540-2008F1BD851D (audio-extractor.net).mp3",
-      "PackagePath": "staticwebassets\\audio\\copy_DA9EDF04-7D58-456B-8540-2008F1BD851D (audio-extractor.net).mp3"
+      "Id": "C:\\Users\\49008545\\TP05\\wwwroot\\audio\\audio.mp3",
+      "PackagePath": "staticwebassets\\audio\\audio.mp3"
     },
     {
       "Id": "C:\\Users\\49008545\\TP05\\wwwroot\\css\\site.css",
@@ -11,6 +11,18 @@
     {
       "Id": "C:\\Users\\49008545\\TP05\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\49008545\\TP05\\wwwroot\\img\\foto delfi.heif",
+      "PackagePath": "staticwebassets\\img\\foto delfi.heif"
+    },
+    {
+      "Id": "C:\\Users\\49008545\\TP05\\wwwroot\\img\\foto fede.HEIC",
+      "PackagePath": "staticwebassets\\img\\foto fede.HEIC"
+    },
+    {
+      "Id": "C:\\Users\\49008545\\TP05\\wwwroot\\img\\foto mile.HEIC",
+      "PackagePath": "staticwebassets\\img\\foto mile.HEIC"
     },
     {
       "Id": "C:\\Users\\49008545\\TP05\\wwwroot\\js\\site.js",
