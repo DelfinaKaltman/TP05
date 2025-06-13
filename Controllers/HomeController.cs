@@ -37,30 +37,23 @@ public class HomeController : Controller
     }
 
 
-    public IActionResult PasarDeSala(string respuesta)
+    public IActionResult PasarDeSala(string respuesta, string click)
     {
         Partida partida = Objeto.StringToObject<Partida>(HttpContext.Session.GetString("juego"));
-        partida.comprobarRespuesta(respuesta);
-        HttpContext.Session.SetString("juego", Objeto.ObjectToString(partida));
-        return View("Sala"+partida.numeroSala);
-    }
+        if(respuesta != null)
+        {
+            partida.comprobarRespuesta(respuesta);
+        } else 
+        {
+            if(click == "true")
+            {
+                ViewBag.pista = partida.pedirPista();
+            }
+        }
 
-    public IActionResult PedirPista()
-    {
-        Partida partida = Objeto.StringToObject<Partida>(HttpContext.Session.GetString("juego"));
-        partida.pedirPista();
-        HttpContext.Session.SetString("juego", Objeto.ObjectToString(partida));
-        return View("Pistas");
-    }
-
-
-    public IActionResult Resultado(int numeroSala, string respuesta)
-    {
-        Partida partida = Objeto.StringToObject<Partida>(HttpContext.Session.GetString("juego"));
-        partida.comprobarRespuesta(respuesta);
         HttpContext.Session.SetString("juego", Objeto.ObjectToString(partida));
 
-        if(numeroSala >= 5) 
+        if(partida.numeroSala > 5) 
         {
             return View("Resultado");
         } 

@@ -1,9 +1,28 @@
 @{
     ViewData["Title"] = "Sala tres";
 }
+<section class="sala3">
+<h3>Entraste al vestuario local. Camisetas colgadas, botines en el suelo y el murmullo lejano de la hinchada. Es tu momento de prepararte… el estadio te espera, 
+pero antes de salir al campo, hay algo que te frena: necesitás descubrir el código correcto, adivina el orden.</h3>
+<h4>
+    Zapatillas = 1
+    Medias = 2
+    Remera = 3
+    Short = 4
+</h4>
+
 <p>Respuesta:</p>
 <form action='@Url.Action("PasarDeSala", "Home")' method='POST'>
-<input type="text" name="respuesta"/>
-<input type="submit" name="arriesgar"/>
+    <input type="text" name="respuesta"/>
+    <input type="submit" name="arriesgar"/>
 </form>
-<a href='@Url.Action("PedirPista", "Home")'>Quiero una pista</a>
+<form class="pista" action='@Url.Action("PasarDeSala")' method="get">
+    <input type="hidden" name="click" value="true" />
+        <button type="input"></button>
+</form>
+
+@if(ViewBag.pista != null)
+{
+    <h2>@ViewBag.pista</h2>
+}
+</section>

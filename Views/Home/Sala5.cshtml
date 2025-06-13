@@ -1,9 +1,28 @@
 @{
     ViewData["Title"] = "Sala cinco";
 }
+<section class="sala5">
+
+
+<h3>Ya estás en la cancha, el ruido de la hinchada retumba en tu cabeza. Tenés los botines puestos, la pelota lista... pero algo te detiene.
+Una última consigna aparece en la pantalla del estadio:
+‘G abre el acertijo, O va caminando al lado, y L lo cierra encantado.
+Si a cada letra le das su lugar, ¿qué tres números vas a anotar?’
+El estadio te mira en silencio. Solo con la respuesta correcta vas a poder dar el paso hacia la victoria.</h3>
+
+
 <p>Respuesta:</p>
 <form action='@Url.Action("PasarDeSala", "Home")' method='POST'>
-<input type="text" name="respuesta"/>
-<input type="submit" name="arriesgar"/>
+    <input type="text" name="respuesta"/>
+    <input type="submit" name="arriesgar"/>
 </form>
-<a href='@Url.Action("PedirPista", "Home")'>Quiero una pista</a>
+<form class="pista" action='@Url.Action("PasarDeSala")' method="get">
+    <input type="hidden" name="click" value="true" />
+        <button type="input"></button>
+</form>
+
+@if(ViewBag.pista != null)
+{
+    <h2>@ViewBag.pista</h2>
+}
+</section>

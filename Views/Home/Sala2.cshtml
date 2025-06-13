@@ -1,10 +1,22 @@
 @{
     ViewData["Title"] = "Sala dos";
 }
-<h1>De qué equipo está decorada la habitación?</h1>
+<section class="sala2">
+<h3>Llegaste a la zona de seguridad del estadio. A pocos metros, dos guardias patrullan el pasillo que lleva al vestuario. Para poder pasar, tenes que descubrir la palabra</h3>
+
+<h2>¿De qué equipo está decorada la habitación?</h2>
 <p>Respuesta:</p>
 <form action='@Url.Action("PasarDeSala", "Home")' method='POST'>
-<input type="text" name="respuesta"/>
-<input type="submit" name="arriesgar"/>
+    <input type="text" name="respuesta"/>
+    <input type="submit" name="arriesgar"/>
 </form>
-<a href='@Url.Action("PedirPista", "Home")'>Quiero una pista</a>
+<form class="pista" action='@Url.Action("PasarDeSala")' method="get">
+   <input type="hidden" name="click" value="true" />
+        <button type="input"></button>
+</form>
+
+@if(ViewBag.pista != null)
+{
+    <h2>@ViewBag.pista</h2>
+}
+</section>
