@@ -13,16 +13,36 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\49008545\\TP05\\wwwroot\\img\\foto delfi.heif",
-      "PackagePath": "staticwebassets\\img\\foto delfi.heif"
+      "Id": "C:\\Users\\49008545\\TP05\\wwwroot\\img\\fotoDelfi.png",
+      "PackagePath": "staticwebassets\\img\\fotoDelfi.png"
     },
     {
-      "Id": "C:\\Users\\49008545\\TP05\\wwwroot\\img\\foto fede.HEIC",
-      "PackagePath": "staticwebassets\\img\\foto fede.HEIC"
+      "Id": "C:\\Users\\49008545\\TP05\\wwwroot\\img\\fotoFede.png",
+      "PackagePath": "staticwebassets\\img\\fotoFede.png"
     },
     {
-      "Id": "C:\\Users\\49008545\\TP05\\wwwroot\\img\\foto mile.HEIC",
-      "PackagePath": "staticwebassets\\img\\foto mile.HEIC"
+      "Id": "C:\\Users\\49008545\\TP05\\wwwroot\\img\\fotoMile.png",
+      "PackagePath": "staticwebassets\\img\\fotoMile.png"
+    },
+    {
+      "Id": "C:\\Users\\49008545\\TP05\\wwwroot\\img\\sala1.png",
+      "PackagePath": "staticwebassets\\img\\sala1.png"
+    },
+    {
+      "Id": "C:\\Users\\49008545\\TP05\\wwwroot\\img\\sala2.png",
+      "PackagePath": "staticwebassets\\img\\sala2.png"
+    },
+    {
+      "Id": "C:\\Users\\49008545\\TP05\\wwwroot\\img\\sala3.png",
+      "PackagePath": "staticwebassets\\img\\sala3.png"
+    },
+    {
+      "Id": "C:\\Users\\49008545\\TP05\\wwwroot\\img\\sala4.png",
+      "PackagePath": "staticwebassets\\img\\sala4.png"
+    },
+    {
+      "Id": "C:\\Users\\49008545\\TP05\\wwwroot\\img\\sala5.png",
+      "PackagePath": "staticwebassets\\img\\sala5.png"
     },
     {
       "Id": "C:\\Users\\49008545\\TP05\\wwwroot\\js\\site.js",

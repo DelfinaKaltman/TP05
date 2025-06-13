@@ -21,3 +21,124 @@ footer {
   background-color: #f8f9fa;
   border-top: 1px solid #e9ecef;
 }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #e3f2fd;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Contenedor general de secciones */
+section {
+  background-color: rgba(0, 51, 102, 0.5); /* azul oscuro con transparencia */
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+  border: 2px solid #03a9f4;
+  box-shadow: 0 0 15px rgba(3, 169, 244, 0.3);
+}
+
+/* Títulos y textos con contorno */
+h1, h2, h3, h4, p {
+  color: #e1f5fe;
+  text-shadow: 2px 2px 4px #000; /* borde negro para contraste */
+}
+
+/* Pistas (desde ViewBag.pista) */
+h2.pista {
+  background-color: rgba(3, 169, 244, 0.4);
+  padding: 1rem;
+  border-radius: 12px;
+  border: 2px solid #0288d1;
+  box-shadow: 0 0 10px #0288d1;
+  text-align: center;
+}
+
+/* Botones y enlaces */
+a, button, input[type="submit"] {
+  display: inline-block;
+  background-color: #0288d1;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  margin: 0.5rem 0.5rem 0 0;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+a:hover, button:hover, input[type="submit"]:hover {
+  background-color: #03a9f4;
+}
+
+/* Inputs de texto */
+input[type="text"] {
+  padding: 0.5rem;
+  border: 2px solid #0288d1;
+  border-radius: 8px;
+  margin-right: 0.5rem;
+  color: #003366;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Index especial */
+.index div {
+  background-color: rgba(0, 102, 204, 0.6);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 2px solid #03a9f4;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(3, 169, 244, 0.4);
+}
+
+/* Créditos */
+.credito img {
+  width: 150px;
+  border-radius: 50%;
+  margin: 1rem;
+  box-shadow: 0 0 10px #0288d1;
+}
+
+/* Estilo por salas para fondos */
+.index, .sala1, .sala2, .sala3, .sala4, .sala5, .credito, .resultado {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Resultado final (victoria) */
+.resultado {
+  background-color: rgba(0, 102, 204, 0.7);
+  border: 3px solid #00b0ff;
+  padding: 3rem;
+  border-radius: 20px;
+  text-align: center;
+  color: #ffffff;
+  box-shadow: 0 0 30px rgba(0, 176, 255, 0.5);
+}
+
+.sala1{
+  background-image: url(../img/sala1.png);
+}
+.sala2{
+  background-image: url(../img/sala2.png);
+}
+.sala3{
+  background-image: url(../img/sala3.png);
+}
+.sala4{
+  background-image: url(../img/sala4.png);
+}
+.sala5{
+  background-image: url(../img/sala5.png);
+}
