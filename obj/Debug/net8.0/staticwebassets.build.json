@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZuQ1Dd3Z8+uSuXGd0xYUNw2gBULV7YbATHxI4H+y8jk=",
+  "Hash": "NROsCkG1sg/6H9HHnLlB5Kwe8VYH9kSl4vUlBOF0z28=",
   "Source": "TP05",
   "BasePath": "_content/TP05",
   "Mode": "Default",
@@ -72,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\49008545\\TP05\\wwwroot\\img\\champions.png",
+      "SourceId": "TP05",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\49008545\\TP05\\wwwroot\\",
+      "BasePath": "_content/TP05",
+      "RelativePath": "img/champions.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\champions.png"
     },
     {
       "Identity": "C:\\Users\\49008545\\TP05\\wwwroot\\img\\fotoDelfi.png",

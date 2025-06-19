@@ -3,21 +3,23 @@
 }
 <section class="sala1">
 
-
-<audio controls> <source src="~/audio/audio.mp3" type="audio/mpeg"></audio>
 <h3>Acabás de llegar al estadio. Las puertas están cerradas, los controles de seguridad son estrictos y el partido está por empezar. Tu misión comienza ahora: encontrar la forma de entrar sin ser detectado.</h3>
+<img src="/img/sala1.png" alt="ERROR">
+<audio controls> <source src="~/audio/audio.mp3" type="audio/mpeg"></audio>
 
-<h2>¿Cuál es la contraseña?</h2>
-<p>Respuesta:</p>
-<form action='@Url.Action("PasarDeSala", "Home")' method='POST'>
-    <input type="text" name="respuesta"/>
-    <input type="submit" name="arriesgar"/>
-</form>
-<form class="pista" action='@Url.Action("PasarDeSala")' method="get">
-    <input type="hidden" name="click" value="true" />
-        <input type="submit" value="Pista"/>
-</form>
+<div>
 
+    <h2>¿Cuál es la contraseña?</h2>
+    <p>Respuesta:</p>
+    <form action='@Url.Action("PasarDeSala", "Home")' method='POST'>
+        <input type="text" name="respuesta"/>
+        <input type="submit" name="arriesgar"/>
+    </form>
+    <form class="pista" action='@Url.Action("PasarDeSala")' method="get">
+        <input type="hidden" name="click" value="true" />
+            <input type="submit" value="Pista"/>
+    </form>
+</div>
 @if(ViewBag.pista != null)
 {
     <h2>@ViewBag.pista</h2>
